@@ -1,16 +1,18 @@
+import { Link } from "react-router";
+
 export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-inner">
-        <a href="index.html" className="logo">
+        <Link  to="/" className="logo">
           <span className="mark">G</span>Game
           <span className="vault">Vault</span>
-        </a>
+        </Link>
         <div className="nav-links">
-          <a href="index.html" className="active">
+          <Link to="/" className="active">
             Home
-          </a>
-          <a href="catalog.html">Catalog</a>
+          </Link>
+          <Link to="/catalog">Catalog</Link>
           <a href="collection.html">My Collection</a>
           <a href="login.html">Login</a>
         </div>

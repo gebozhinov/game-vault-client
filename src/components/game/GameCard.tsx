@@ -1,4 +1,4 @@
-export default function GameCard() {
+export default function GameCard({showAddButton}: {showAddButton?: boolean}) {
   return (
     <article className="card">
       <div className="ph cover">
@@ -24,6 +24,13 @@ export default function GameCard() {
             <span className="rating-num">4.2</span>
           </span>
         </div>
+        {showAddButton && (
+          <div className="card-foot">
+            <button className="btn btn-outline btn-sm btn-block">
+              + Add to Collection
+            </button>
+          </div>
+        )}
       </div>
     </article>
   );
