@@ -5,7 +5,7 @@ import CompletedSection from "./CompletedSection";
 import DroppedSection from "./DroppedSection";
 import PlayingSection from "./PlayingSection";
 import WishlistSection from "./WishlistSection";
-import type { Tab } from "../../interfaces/Tab";
+import type { Tab } from "../../types";
 
 export default function Collection() {
   const [activeTab, setActiveTab] = useState<Tab>("playing");
