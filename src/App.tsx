@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Home from "./components/home/Home";
 import Navbar from "./components/Navbar";
 import Catalog from "./components/catalog/Catalog";
+import Collection from "./components/collection/Collection";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/catalog" element={<Catalog />}></Route>
+        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/collection" element={<Collection />} />
       </Routes>
 
       <Footer />

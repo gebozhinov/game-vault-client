@@ -13,7 +13,7 @@ export default function Navbar() {
             Home
           </Link>
           <Link to="/catalog">Catalog</Link>
-          <a href="collection.html">My Collection</a>
+          <Link to="/collection">My Collection</Link>
           <a href="login.html">Login</a>
         </div>
         <div className="nav-right">
