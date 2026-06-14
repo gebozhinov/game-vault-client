@@ -20,13 +20,12 @@ export default function AuthForm() {
               <LoginForm />
               <AuthDivider />
               <OAuthButtons />
+              <div className="auth-foot">
+                New to GameVault? <a href="#" onClick={() => setActiveTab('register')}>Create an account →</a>
+              </div>
             </>
           )}
           {activeTab === "register" && <RegisterForm />}
-
-          <div className="auth-foot">
-            New to GameVault? <a href="#">Create an account →</a>
-          </div>
         </div>
       </div>
     </div>
