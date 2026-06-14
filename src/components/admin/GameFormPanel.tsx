@@ -1,4 +1,21 @@
+import { useState } from "react";
+
+const PLATFORMS = ["PC", "PS5", "Xbox", "Switch"];
+
 export default function GameFormPanel() {
+  const [selectedPlatforms, setSelectedPlatforms] = useState<Set<string>>(
+    new Set(),
+  );
+
+  function togglePlatform(platform: string) {
+    setSelectedPlatforms((prev) => {
+      const next = new Set(prev);
+      console.log(next);
+      next.has(platform) ? next.delete(platform) : next.add(platform);
+      return next;
+    });
+  }
+
   return (
     <div className="panel-block">
       <div className="pb-head">
@@ -32,22 +49,16 @@ export default function GameFormPanel() {
         <div className="field full">
           <label>Platform</label>
           <div className="platform-checks">
-            <label className="check checked">
-              <span className="box" />
-              PC
-            </label>
-            <label className="check checked">
-              <span className="box" />
-              PS5
-            </label>
-            <label className="check">
-              <span className="box" />
-              Xbox
-            </label>
-            <label className="check">
-              <span className="box" />
-              Switch
-            </label>
+            {PLATFORMS.map((platform) => (
+              <label
+                key={platform}
+                className={`check ${selectedPlatforms.has(platform) ? "checked" : ""}`}
+                onClick={() => togglePlatform(platform)}
+              >
+                <span className="box" />
+                {platform}
+              </label>
+            ))}
           </div>
         </div>
         <div className="field">

@@ -14,6 +14,7 @@ export default function Navbar() {
           </Link>
           <Link to="/catalog">Catalog</Link>
           <Link to="/collection">My Collection</Link>
+          <Link to="/admin">Admin</Link>
           <Link to="/login">Login</Link>
         </div>
         <div className="nav-right">
