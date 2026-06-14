@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function HeroBanner() {
   return (
     <header className="hero">
@@ -28,12 +30,12 @@ export default function HeroBanner() {
           </span>
         </div>
         <div className="hero-cta">
-          <a href="game.html" className="btn btn-accent btn-lg">
+          <Link to="/game/1" className="btn btn-accent btn-lg">
             View Game →
-          </a>
-          <a href="game.html" className="btn btn-outline btn-lg">
+          </Link>
+          <Link to="/game/1" className="btn btn-outline btn-lg">
             + Add to Collection
-          </a>
+          </Link>
         </div>
       </div>
     </header>

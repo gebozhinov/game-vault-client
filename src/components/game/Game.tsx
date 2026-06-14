@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import GameCard from "./GameCard";
 
 export default function Game() {
@@ -5,9 +6,9 @@ export default function Game() {
     <section>
       <div className="section-head">
         <h2>Trending This Week</h2>
-        <a href="catalog.html" className="see-all">
+        <Link to="/catalog" className="see-all">
           View all →
-        </a>
+        </Link>
       </div>
       <div className="row-4">
         <GameCard />

@@ -14,10 +14,10 @@ export default function Navbar() {
           </Link>
           <Link to="/catalog">Catalog</Link>
           <Link to="/collection">My Collection</Link>
-          <a href="login.html">Login</a>
+          <Link to="/login">Login</Link>
         </div>
         <div className="nav-right">
-          <a href="catalog.html" className="nav-search" aria-label="Search">
+          <Link to="/catalog" className="nav-search" aria-label="Search">
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -27,7 +27,7 @@ export default function Navbar() {
               <circle cx={11} cy={11} r={7} />
               <path d="M21 21l-4.3-4.3" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
